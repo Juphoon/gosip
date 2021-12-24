@@ -8,11 +8,11 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/ghettovoice/gosip/sip"
-	"github.com/ghettovoice/gosip/testutils"
-	"github.com/ghettovoice/gosip/timing"
-	"github.com/ghettovoice/gosip/transport"
-	"github.com/ghettovoice/gosip/util"
+	"github.com/Juphoon/gosip/sip"
+	"github.com/Juphoon/gosip/testutils"
+	"github.com/Juphoon/gosip/timing"
+	"github.com/Juphoon/gosip/transport"
+	"github.com/Juphoon/gosip/util"
 )
 
 var _ = Describe("ConnectionHandler", func() {

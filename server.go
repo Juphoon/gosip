@@ -8,11 +8,11 @@ import (
 	"net"
 	"sync"
 
-	"github.com/ghettovoice/gosip/log"
-	"github.com/ghettovoice/gosip/sip"
-	"github.com/ghettovoice/gosip/transaction"
-	"github.com/ghettovoice/gosip/transport"
-	"github.com/ghettovoice/gosip/util"
+	"github.com/Juphoon/gosip/log"
+	"github.com/Juphoon/gosip/sip"
+	"github.com/Juphoon/gosip/transaction"
+	"github.com/Juphoon/gosip/transport"
+	"github.com/Juphoon/gosip/util"
 
 	"github.com/tevino/abool"
 )

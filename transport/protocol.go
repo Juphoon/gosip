@@ -5,8 +5,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ghettovoice/gosip/log"
-	"github.com/ghettovoice/gosip/sip"
+	"github.com/Juphoon/gosip/log"
+	"github.com/Juphoon/gosip/sip"
 )
 
 const (

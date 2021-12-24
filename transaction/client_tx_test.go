@@ -7,9 +7,9 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/ghettovoice/gosip/sip"
-	"github.com/ghettovoice/gosip/testutils"
-	"github.com/ghettovoice/gosip/transaction"
+	"github.com/Juphoon/gosip/sip"
+	"github.com/Juphoon/gosip/testutils"
+	"github.com/Juphoon/gosip/transaction"
 )
 
 var _ = Describe("ClientTx", func() {

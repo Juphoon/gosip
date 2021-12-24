@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/ghettovoice/gosip/log"
+	"github.com/Juphoon/gosip/log"
 )
 
 // Response RFC 3261 - 7.2.

@@ -3,7 +3,7 @@ package sip_test
 import (
 	"testing"
 
-	"github.com/ghettovoice/gosip/sip"
+	"github.com/Juphoon/gosip/sip"
 )
 
 func TestAddress_Equals(t *testing.T) {

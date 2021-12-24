@@ -1,4 +1,4 @@
-module github.com/ghettovoice/gosip
+module github.com/Juphoon/gosip
 
 go 1.13
 

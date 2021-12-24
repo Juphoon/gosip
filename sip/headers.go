@@ -6,7 +6,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/ghettovoice/gosip/util"
+	"github.com/Juphoon/gosip/util"
 )
 
 // SIP Headers structs

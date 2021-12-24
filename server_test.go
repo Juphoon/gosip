@@ -12,11 +12,11 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/ghettovoice/gosip"
-	"github.com/ghettovoice/gosip/sip"
-	"github.com/ghettovoice/gosip/sip/parser"
-	"github.com/ghettovoice/gosip/testutils"
-	"github.com/ghettovoice/gosip/transport"
+	"github.com/Juphoon/gosip"
+	"github.com/Juphoon/gosip/sip"
+	"github.com/Juphoon/gosip/sip/parser"
+	"github.com/Juphoon/gosip/testutils"
+	"github.com/Juphoon/gosip/transport"
 )
 
 var _ = Describe("GoSIP Server", func() {
