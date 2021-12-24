@@ -585,6 +585,10 @@ func ParseUri(uriStr string) (uri sip.Uri, err error) {
 		var sipUri sip.SipUri
 		sipUri, err = ParseSipUri(uriStr)
 		uri = &sipUri
+	case "tel":
+		var telUri sip.TelUri
+		telUri, err = ParseTelUri(uriStr)
+		uri = &telUri
 	default:
 		err = fmt.Errorf("unsupported URI schema %s", uriStr[:colonIdx])
 	}
@@ -693,6 +697,28 @@ func ParseSipUri(uriStr string) (uri sip.SipUri, err error) {
 		return // Defensive return
 	}
 
+	return
+}
+
+// ParseTelUri converts a string representation of a SIP or SIPS URI into a SipUri object.
+func ParseTelUri(uriStr string) (uri sip.TelUri, err error) {
+	// Store off the original URI in case we need to print it in an error.
+	uriStrCopy := uriStr
+
+	// URI should start 'sip' or 'sips'. Check the first 3 chars.
+	if strings.ToLower(uriStr[:3]) != "tel" {
+		err = fmt.Errorf("invalid TEL uri protocol name in '%s'", uriStrCopy)
+		return
+	}
+	uriStr = uriStr[3:]
+
+	// The 'sip' or 'sips' protocol name should be followed by a ':' character.
+	if uriStr[0] != ':' {
+		err = fmt.Errorf("no ':' after protocol name in TEL uri '%s'", uriStrCopy)
+		return
+	}
+	uriStr = uriStr[1:]
+	uri.FUser = sip.String{Str: uriStr}
 	return
 }
 
