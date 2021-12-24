@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ghettovoice/gosip/log"
+	"github.com/Juphoon/gosip/log"
 )
 
 // parserBuffer is a specialized buffer for use in the parser.

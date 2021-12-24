@@ -7,9 +7,9 @@ import (
 	"net"
 	"sync"
 
-	"github.com/ghettovoice/gosip/log"
-	"github.com/ghettovoice/gosip/sip"
-	"github.com/ghettovoice/gosip/transport"
+	"github.com/Juphoon/gosip/log"
+	"github.com/Juphoon/gosip/sip"
+	"github.com/Juphoon/gosip/transport"
 )
 
 type MockListener struct {
