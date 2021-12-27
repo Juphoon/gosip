@@ -1650,3 +1650,36 @@ func (route *RecordRouteHeader) Equals(other interface{}) bool {
 
 	return false
 }
+
+// SbcHeader introduces SIP 'JCC-SBC' header
+type SbcHeader string
+
+func (sbc *SbcHeader) String() string { return fmt.Sprintf("%s: %s", sbc.Name(), sbc.Value()) }
+
+func (sbc *SbcHeader) Name() string { return "JCC-SBC" }
+
+func (sbc SbcHeader) Value() string { return string(sbc) }
+
+func (sbc *SbcHeader) Clone() Header { return sbc }
+
+func (sbc *SbcHeader) Equals(other interface{}) bool {
+	if h, ok := other.(SbcHeader); ok {
+		if sbc == nil {
+			return false
+		}
+
+		return *sbc == h
+	}
+	if h, ok := other.(*SbcHeader); ok {
+		if sbc == h {
+			return true
+		}
+		if sbc == nil && h != nil || sbc != nil && h == nil {
+			return false
+		}
+
+		return *sbc == *h
+	}
+
+	return false
+}
